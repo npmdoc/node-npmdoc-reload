@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/jprichardson/reload#readme"
-
-    >reload (v1.1.2)</a>
+    <a href="https://github.com/jprichardson/reload#readme">reload (v1.1.2)</a>
 </h1>
 <h4>Node.js module to refresh and reload your code in your browser when your code changes. No browser plugins required.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.reload">module reload</a><ol>
 
@@ -121,35 +114,35 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function reload(httpServer, expressApp, verboseLogging) {
-  var reloadCode = fs.readFileSync(RELOAD_FILE, &#x27;utf8&#x27;)
+  var reloadCode = fs.readFileSync(RELOAD_FILE, 'utf8')
 
   var connections = new Set()
-  var WebSocketServer = require(&#x27;ws&#x27;).Server
+  var WebSocketServer = require('ws').Server
   var wss = new WebSocketServer({ server: httpServer })
 
-  wss.on(&#x27;connection&#x27;, (ws) =&#x3e; {
+  wss.on('connection', (ws) =&gt; {
     connections.add(ws)
-    ws.on(&#x27;close&#x27;, function () {
+    ws.on('close', function () {
       connections.delete(ws)
     })
 
     if (verboseLogging) {
-      console.log(&#x27;Reload client connected to server&#x27;)
+      console.log('Reload client connected to server')
     }
   })
 
   if (verboseLogging) {
-    reloadCode = reloadCode.replace(&#x27;verboseLogging = false&#x27;, &#x27;verboseLogging = true&#x27;)
+    reloadCode = reloadCode.replace('verboseLogging = false', 'verboseLogging = true')
   }
 
-  expressApp.get(&#x27;/reload/reload.js&#x27;, function (req, res) {
-    res.type(&#x27;text/javascript&#x27;)
+  expressApp.get('/reload/reload.js', function (req, res) {
+    res.type('text/javascript')
     res.send(reloadCode)
   })
 
   function sendMessage (message) {
     if (verboseLogging) {
-      console.log(&#x27;Sending message to &#x27; + (connections.size) + &#x27; connections: &#x27; + message)
+      console.log('Sending message to ' + (connections.size) + ' connections: ' + message)
     }
     for (let conn of connections) {
       conn.send(message, function (error) {
@@ -161,16 +154,16 @@
   }
 
   // Return an object, so that the user can manually reload the server by calling the returned function reload. Using the web socket
- connection from above, we provide a function called reload which passes the command &#x27;reload&#x27; to the function sendMessage. sendMessage
- sends the message &#x27;reload&#x27; over the socket (if the socket is connected) to the client. The client then recieves the messages checks
+ connection from above, we provide a function called reload which passes the command 'reload' to the function sendMessage. sendMessage
+ sends the message 'reload' over the socket (if the socket is connected) to the client. The client then recieves the messages checks
  to see if the message is reload and then reloads the page.
   return {
-    &#x27;connections&#x27;: connections,
-    &#x27;server&#x27;: reload,
-    &#x27;reload&#x27;: function () {
-      sendMessage(&#x27;reload&#x27;)
+    'connections': connections,
+    'server': reload,
+    'reload': function () {
+      sendMessage('reload')
     },
-    &#x27;sendMessage&#x27;: sendMessage
+    'sendMessage': sendMessage
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -179,7 +172,7 @@ You can manually call a reload event by calling `reload()` yourself. An example 
 
 ```javascript
 reloadServer = reload(server, app);
-watch.watchTree(__dirname + &#x22;/public&#x22;, function (f, curr, prev) {
+watch.watchTree(__dirname + "/public", function (f, curr, prev) {
     // Fire server-side reload event
     reloadServer.<span class="apidocCodeKeywordSpan">reload</span>();
 });
@@ -222,35 +215,35 @@ reload(httpServer, expressApp, [verbose])
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function reload(httpServer, expressApp, verboseLogging) {
-  var reloadCode = fs.readFileSync(RELOAD_FILE, &#x27;utf8&#x27;)
+  var reloadCode = fs.readFileSync(RELOAD_FILE, 'utf8')
 
   var connections = new Set()
-  var WebSocketServer = require(&#x27;ws&#x27;).Server
+  var WebSocketServer = require('ws').Server
   var wss = new WebSocketServer({ server: httpServer })
 
-  wss.on(&#x27;connection&#x27;, (ws) =&#x3e; {
+  wss.on('connection', (ws) =&gt; {
     connections.add(ws)
-    ws.on(&#x27;close&#x27;, function () {
+    ws.on('close', function () {
       connections.delete(ws)
     })
 
     if (verboseLogging) {
-      console.log(&#x27;Reload client connected to server&#x27;)
+      console.log('Reload client connected to server')
     }
   })
 
   if (verboseLogging) {
-    reloadCode = reloadCode.replace(&#x27;verboseLogging = false&#x27;, &#x27;verboseLogging = true&#x27;)
+    reloadCode = reloadCode.replace('verboseLogging = false', 'verboseLogging = true')
   }
 
-  expressApp.get(&#x27;/reload/reload.js&#x27;, function (req, res) {
-    res.type(&#x27;text/javascript&#x27;)
+  expressApp.get('/reload/reload.js', function (req, res) {
+    res.type('text/javascript')
     res.send(reloadCode)
   })
 
   function sendMessage (message) {
     if (verboseLogging) {
-      console.log(&#x27;Sending message to &#x27; + (connections.size) + &#x27; connections: &#x27; + message)
+      console.log('Sending message to ' + (connections.size) + ' connections: ' + message)
     }
     for (let conn of connections) {
       conn.send(message, function (error) {
@@ -262,16 +255,16 @@ reload(httpServer, expressApp, [verbose])
   }
 
   // Return an object, so that the user can manually reload the server by calling the returned function reload. Using the web socket
- connection from above, we provide a function called reload which passes the command &#x27;reload&#x27; to the function sendMessage. sendMessage
- sends the message &#x27;reload&#x27; over the socket (if the socket is connected) to the client. The client then recieves the messages checks
+ connection from above, we provide a function called reload which passes the command 'reload' to the function sendMessage. sendMessage
+ sends the message 'reload' over the socket (if the socket is connected) to the client. The client then recieves the messages checks
  to see if the message is reload and then reloads the page.
   return {
-    &#x27;connections&#x27;: connections,
-    &#x27;server&#x27;: reload,
-    &#x27;reload&#x27;: function () {
-      sendMessage(&#x27;reload&#x27;)
+    'connections': connections,
+    'server': reload,
+    'reload': function () {
+      sendMessage('reload')
     },
-    &#x27;sendMessage&#x27;: sendMessage
+    'sendMessage': sendMessage
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -280,7 +273,7 @@ You can manually call a reload event by calling `reload()` yourself. An example 
 
 ```javascript
 reloadServer = reload(server, app);
-watch.watchTree(__dirname + &#x22;/public&#x22;, function (f, curr, prev) {
+watch.watchTree(__dirname + "/public", function (f, curr, prev) {
     // Fire server-side reload event
     reloadServer.<span class="apidocCodeKeywordSpan">reload</span>();
 });
@@ -320,3 +313,4 @@ reload(httpServer, expressApp, [verbose])
     ]
 </div>
 </div>
+</body></html>
