@@ -1,9 +1,14 @@
-# api documentation for  [reload (v1.1.1)](https://github.com/jprichardson/reload#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-reload.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-reload) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-reload.svg)](https://travis-ci.org/npmdoc/node-npmdoc-reload)
+# npmdoc-reload
+
+#### api documentation for  [reload (v1.1.2)](https://github.com/jprichardson/reload#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-reload.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-reload) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-reload.svg)](https://travis-ci.org/npmdoc/node-npmdoc-reload)
+
 #### Node.js module to refresh and reload your code in your browser when your code changes. No browser plugins required.
 
-[![NPM](https://nodei.co/npm/reload.png?downloads=true)](https://www.npmjs.com/package/reload)
+[![NPM](https://nodei.co/npm/reload.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/reload)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-reload/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-reload_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-reload/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-reload/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-reload/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-reload/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-reload/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-reload/build/screenCapture.npmPackageListing.svg)
 
@@ -17,8 +22,7 @@
 
 {
     "author": {
-        "name": "JP Richardson",
-        "email": "jprichardson@gmail.com"
+        "name": "JP Richardson"
     },
     "bin": {
         "reload": "./bin/reload"
@@ -28,8 +32,7 @@
     },
     "contributors": [
         {
-            "name": "Alexander J. Lallier",
-            "email": "alexanderlallier@aol.com"
+            "name": "Alexander J. Lallier"
         }
     ],
     "dependencies": {
@@ -48,10 +51,10 @@
     },
     "directories": {},
     "dist": {
-        "shasum": "d8b50d9da5e8258b9ffd71b9670a16695053f6c0",
-        "tarball": "https://registry.npmjs.org/reload/-/reload-1.1.1.tgz"
+        "shasum": "0b633c0dd427f7853a033a35989932742247684d",
+        "tarball": "https://registry.npmjs.org/reload/-/reload-1.1.2.tgz"
     },
-    "gitHead": "606ead770582ea17036dcef207041fbde2172d01",
+    "gitHead": "b573d26b818c9fddfecd3866e4dbc302f5eae62c",
     "homepage": "https://github.com/jprichardson/reload#readme",
     "keywords": [
         "reload",
@@ -64,21 +67,17 @@
     "main": "./lib/reload.js",
     "maintainers": [
         {
-            "name": "alallier",
-            "email": "alexanderlallier@aol.com"
+            "name": "alallier"
         },
         {
-            "name": "jprichardson",
-            "email": "jprichardson@gmail.com"
+            "name": "jprichardson"
         },
         {
-            "name": "vesln",
-            "email": "hi@vesln.com"
+            "name": "vesln"
         }
     ],
     "name": "reload",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+ssh://git@github.com/jprichardson/reload.git"
@@ -87,19 +86,9 @@
         "standard": "standard",
         "test": "npm run standard"
     },
-    "version": "1.1.1"
+    "version": "1.1.2"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module reload](#apidoc.module.reload)
-
-
-
-# <a name="apidoc.module.reload"></a>[module reload](#apidoc.module.reload)
 
 
 
