@@ -133,20 +133,21 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-You can manually call a reload event by calling `reload()` yourself. An example is shown below:
 
-```javascript
-reloadServer = reload(server, app);
-watch.watchTree(__dirname + "/public", function (f, curr, prev) {
-    // Fire server-side reload event
-    reloadServer.<span class="apidocCodeKeywordSpan">reload</span>();
-});
-```
 
-### API for Express
 
-```
-reload(httpServer, expressApp, [verbose])
+
+1.1.2 / 2017-04-16
+------------------
+Fix multiple websockets at once when using reload.<span class="apidocCodeKeywordSpan">reload</span>(); See: https://github.com/jprichardson
+/reload/pull/57
+
+1.1.1 / 2017-01-28
+------------------
+Fixed undefined error log on send message. See: https://github.com/jprichardson/reload/pull/59
+
+1.1.0 / 2016-11-12
+------------------
 ...</pre></li>
     </ul>
 
