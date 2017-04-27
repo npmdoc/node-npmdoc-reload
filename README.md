@@ -1,6 +1,6 @@
 # npmdoc-reload
 
-#### api documentation for  [reload (v1.1.2)](https://github.com/jprichardson/reload#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-reload.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-reload) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-reload.svg)](https://travis-ci.org/npmdoc/node-npmdoc-reload)
+#### basic api documentation for  [reload (v1.1.2)](https://github.com/jprichardson/reload#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-reload.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-reload) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-reload.svg)](https://travis-ci.org/npmdoc/node-npmdoc-reload)
 
 #### Node.js module to refresh and reload your code in your browser when your code changes. No browser plugins required.
 
